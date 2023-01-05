@@ -7,6 +7,10 @@ body {
   animation: Gradient 15s ease infinite;
 }
 
+.my-selector {
+  cursor: crosshair;
+}
+
 @keyframes Gradient {
   0% {
     background-position: 0% 50%;
