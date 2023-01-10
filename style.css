@@ -216,3 +216,8 @@ nav {
    -moz-box-shadow: 0 0 5px #000;
    box-shadow: 0 0 5px #000;
 }
+.main {
+	position:relative;
+    width:680px;
+    margin: 0 auto;
+}
