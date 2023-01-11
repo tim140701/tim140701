@@ -174,12 +174,14 @@ nav {
    height: 200px;
    position: absolute;
    overflow: hidden;
+   object-fit: cover; 
    top: 0;
    left: 0;
 }
 .view img {
    display: block;
    position: relative;
+   object-fit: cover; 
 }
 .view h2 {
    text-transform: uppercase;
