@@ -54,7 +54,7 @@ nav {
   padding: 6px 0; 
 }
 
-.view-first img {
+.view-first {
    -webkit-transition: all 0.2s linear;
    -moz-transition: all 0.2s linear;
    -o-transition: all 0.2s linear;
@@ -165,9 +165,6 @@ nav {
    overflow: hidden;
    position: relative;
    text-align: center;
-   -webkit-box-shadow: 1px 1px 2px #e6e6e6;
-   -moz-box-shadow: 1px 1px 2px #e6e6e6;
-   box-shadow: 1px 1px 2px #e6e6e6;
    cursor: default;
 }
 .view .mask,.view .content {
@@ -182,7 +179,8 @@ nav {
 .view img {
    display: block;
    position: relative;
-   object-fit: cover; 
+   max-width: 100%;
+   max-height: 100%;
 }
 .view h2 {
    text-transform: uppercase;
