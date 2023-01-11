@@ -167,7 +167,9 @@ nav {
    -moz-box-shadow: 1px 1px 2px #e6e6e6;
    box-shadow: 1px 1px 2px #e6e6e6;
    cursor: default;
-   background: #fff url(../images/bgimg.jpg) no-repeat center center;
+   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+   background-size: 400% 400%;
+   animation: Gradient 15s ease infinite;
 }
 .view .mask,.view .content {
    width: 300px;
