@@ -227,6 +227,7 @@ nav {
    padding: 10px;
    background: rgba(0, 0, 0, 0.8);
    margin: 20px 0 0 0;
+   font-family: Raleway;
 }
 
 .storyText a.info {
@@ -234,9 +235,17 @@ nav {
    text-decoration: none;
    padding: 5px 14px;
    background: #000;
+   font-family: Raleway;
    color: #fff;
-   text-transform: uppercase;
    -webkit-box-shadow: 0 0 1px #000;
    -moz-box-shadow: 0 0 1px #000;
    box-shadow: 0 0 1px #000;
+}
+.storyText p {
+   font-family: Raleway;
+   font-size: 12px;
+   position: relative;
+   color: #fff;
+   padding: 10px 10px 10px;
+   text-align: center;
 }
