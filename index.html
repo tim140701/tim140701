@@ -6,8 +6,15 @@
 
 <script>
 function readMoreProjectOne() {
-  document.getElementById("main").style.display = "none"; 
+  document.getElementById("main").style.display = "none";
+  document.getElementById("priceScraperProject").style.display = "block";
 }
+
+function homeReturn() {
+  document.getElementById("priceScraperProject").style.display = "none";
+  document.getElementById("main").style.display = "block"; 
+}
+
 </script>
 
 
@@ -52,6 +59,12 @@ function readMoreProjectOne() {
                 <a href="#" class="info">Read More</a>
             </div>
         </div>  
+    </div>
+  </div>
+      <div id="priceScraperProject" class="main" style="display: none;">
+        <div class="view view-first">
+          <h1>Python Price Scraping Project</h1>
+              <a href="#" class="info" onclick="homeReturn()">Read More</a>
     </div>
   </div>
 </body>
