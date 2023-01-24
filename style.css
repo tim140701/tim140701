@@ -170,6 +170,7 @@ nav {
 .view h2 {
    text-transform: uppercase;
    color: #fff;
+   font-family: Raleway;
    text-align: center;
    position: relative;
    font-size: 17px;
@@ -186,9 +187,10 @@ nav {
    padding: 10px;
    background: rgba(0, 0, 0, 0.8);
    margin: 20px 0 0 0;
+   font-family: Raleway;
 }
 .view p {
-   font-family: Georgia, serif;
+   font-family: Raleway;
    font-style: italic;
    font-size: 12px;
    position: relative;
@@ -219,6 +221,7 @@ nav {
 }
 
 .storyText h1 {
+   font-family: Raleway;
    text-transform: uppercase;
    color: #fff;
    text-align: center;
