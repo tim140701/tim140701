@@ -62,9 +62,58 @@ function homeReturn() {
     </div>
   </div>
       <div id="priceScraperProject" class="main" style="display: none;">
-        <div class="view view-first">
+        <div class="storyText">
           <h1>Python Price Scraping Project</h1>
-              <a href="#" class="info" onclick="homeReturn()">Read More</a>
+          <p>A price scraper, also known as a web scraper, is a tool or program that is used to extract data from websites. In the case of a price scraper, the data that is extracted is typically pricing information for products or services. This information is then collected and stored in a structured format, such as a spreadsheet or database, for further analysis or use.</p>
+
+<p>Price scrapers typically work by sending a request to a website's server, which then returns the HTML code for the page. The price scraper then parses this HTML code to extract the desired information, such as product names, prices, and availability. Some scrapers also use other techniques like web APIs or web scraping libraries to extract the data.</p>
+<p>
+Price scrapers can be used for a variety of purposes, such as monitoring prices for products, comparing prices across different retailers, or tracking price changes over time. They can also be used for market research, or for identifying trends or patterns in pricing data.</p>
+
+<p>Price scrapers can be implemented using a variety of programming languages, such as Python, Java, or JavaScript. Some popular libraries and frameworks that are commonly used for web scraping include BeautifulSoup, Scrapy, and Selenium.</p>
+
+<p>The price scraper I have written can easily lift prices, item names & item descriptions from any website containing a search bar. A product can be entered into the search, and the information will then be lifted into an excel spreadsheet. The project relies on Selenium to run, and gives the user the opportunity to either watch it happen, or have it run in the background. It is written within python.</p>
+<pre>
+<code>
+import time
+from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
+from pandas import DataFrame
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+# Use Selenium to access the website
+driver = webdriver.Chrome()
+driver.get("https://www.sewingmachines.co.uk/browse-machines/sewing-machines/?limit=all")
+
+prices = []
+names = []
+
+    # Use Selenium to find the prices and names on the current page
+page_prices = driver.find_elements(By.CSS_SELECTOR, ".price-box .price")
+original_prices = []
+for price in page_prices:
+    if not price.find_elements(By.XPATH,".//ancestor::*[contains(@class, 'old-price')]"):
+        original_prices.append(price.text)
+prices.extend(original_prices)
+print(original_prices)
+
+page_names = driver.find_elements(By.CSS_SELECTOR,".product-name")
+page_names = [name.text for name in page_names]
+names.extend(page_names)
+print(page_names)
+
+
+# Use Pandas to store the prices and names in an excel file
+df = DataFrame({'Name': names, 'Prices': prices})
+df.to_excel('prices.xlsx', index=False)
+
+driver.close()
+
+</code>
+</pre>
+              <a href="#" class="info" onclick="homeReturn()">Home</a>
     </div>
   </div>
 </body>
