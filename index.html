@@ -1,6 +1,16 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 <link rel="icon" href="https://www.pngarts.com/files/3/Letter-T-PNG-Image.png">
 
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+function readMoreProjectOne() {
+  document.getElementById("main").style.display = "none"; 
+}
+</script>
+
+
 <!DOCTYPE html>
 <html>
 <body>
@@ -15,7 +25,7 @@
             <div class="mask">
                 <h2>Python Price Scraping Project</h2>
                 <p>A python project using Selenium, Chrome webdriver & Pandas to scrape prices and export to a csv file.</p>
-                <a href="#" class="info">Read More</a>
+                <a href="#" class="info" onclick="readMoreProjectOne()">Read More</a>
             </div>
         </div>  
         <div class="view view-first">
